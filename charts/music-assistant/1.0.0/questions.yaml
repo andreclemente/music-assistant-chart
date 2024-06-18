@@ -1,14 +1,10 @@
 groups:
   - name: Music Assistant Configuration
     description: Configure Music Assistant
-#  - name: User and Group Configuration
-#    description: Configure User and Group for Music Assistant
   - name: Network Configuration
     description: Configure Network for Music Assistant
   - name: Storage Configuration
     description: Configure Storage for Music Assistant
-#  - name: Resources Configuration
-#    description: Configure Resources for Music Assistant
 
 questions:
   - variable: image.repository
@@ -48,7 +44,7 @@ questions:
       default: "eth0"
   - variable: "storage.path"
     label: "Storage Path"
-    name: Storage Configuration
+    group: Storage Configuration
     description: "Specify the storage path for Music Assistant data."
     schema:
       type: "string"
