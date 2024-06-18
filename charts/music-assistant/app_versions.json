@@ -1,11 +1,38 @@
 {
-  "versions": [
-    {
+  "1.0.0": {
+    "location": "/charts/music-assistant/1.0.0",
+    "healthy": true,
+    "last_update": "2023-06-13 00:00:00",
+    "required_features": [],
+    "human_version": "1.0.0",
+    "supported": true,
+    "chart_metadata": {
       "version": "1.0.0",
-      "required": true,
-      "location": "https://github.com/andreclemente/music-assistant-chart.git",
-      "tags": ["stable", "latest"],
-      "date": "2023-06-13T00:00:00Z"
+      "name": "music-assistant",
+      "apiVersion": "v2",
+      "appVersion": "1.0.0",
+      "description": "A Helm chart for Music Assistant",
+      "type": "application",
+      "icon": "https://example.com/icon.png"
+    },
+    "app_metadata": null,
+    "schema": {
+      "groups": [
+        {
+          "name": "image",
+          "description": "Image configuration"
+        }
+      ],
+      "questions": [
+        {
+          "variable": "image.repository",
+          "label": "Image Repository",
+          "description": "The repository for the Music Assistant image.",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
     }
-  ]
+  }
 }
