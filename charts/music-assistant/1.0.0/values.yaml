@@ -1,10 +1,10 @@
 image:
-  repository: music-assistant/music-assistant
-  tag: latest
-  pullPolicy: IfNotPresent
-
-storage:
-  path: /mnt/data
+  repository: "music-assistant/music-assistant"
+  tag: "latest"
+  pullPolicy: "IfNotPresent"
 
 externalInterface:
-  interface: eth0
+  interface: "eth0"
+
+storage:
+  path: "/mnt/storage-path"
