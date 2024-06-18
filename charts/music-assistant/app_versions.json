@@ -7,6 +7,7 @@
     "required_features": [],
     "human_version": "1.0.0",
     "supported": true,
+    "version": "1.0.0",
     "chart_metadata": {
       "version": "1.0.0",
       "name": "music-assistant",
