@@ -3,4 +3,8 @@ image:
   tag: latest
   pullPolicy: IfNotPresent
 
-interface: ""
+storage:
+  path: /mnt/data
+
+externalInterface:
+  interface: eth0
