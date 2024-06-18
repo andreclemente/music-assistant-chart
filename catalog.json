@@ -1,7 +1,37 @@
 {
-  "version": "1.0.0",
-  "name": "music-assistant-catalog",
-  "location": "https://github.com/andreclemente/music-assistant-chart.git",
-  "icon": "https://music-assistant.io/assets/transparent-logo.png",
-  "categories": ["Media"]
+    "charts": {
+        "music-assistant": {
+            "app_readme": "<h1>Music Assistant</h1>\n<p>Music Assistant is a tool to manage and play music files on your TrueNAS SCALE server.</p>\n<p>Additional configuration details can be found in the <a href=\"https://music-assistant.io/docs\">Music Assistant documentation</a>.</p>",
+            "categories": [
+                "Media"
+            ],
+            "description": "Music Assistant is a versatile tool for managing your music collection and playback.",
+            "healthy": true,
+            "healthy_error": null,
+            "home": "https://music-assistant.io",
+            "location": "/__w/charts/charts/charts/music-assistant-chart",
+            "latest_version": "1.0.0",
+            "latest_app_version": "2.0.7",
+            "latest_human_version": "2.0.7_1.0.0",
+            "last_update": "2024-06-18 12:00:00",
+            "name": "music-assistant",
+            "recommended": false,
+            "title": "Music Assistant",
+            "maintainers": [],
+            "tags": [
+                "music",
+                "media",
+                "assistant"
+            ],
+            "screenshots": [
+                "https://music-assistant.io/screenshots/screenshot1.png",
+                "https://music-assistant.io/screenshots/screenshot2.png"
+            ],
+            "sources": [
+                "https://github.com/yourusername/music-assistant-chart",
+                "https://music-assistant.io/docs/installation"
+            ],
+            "icon_url": "https://music-assistant.io/assets/icon.png"
+        }
+    }
 }
