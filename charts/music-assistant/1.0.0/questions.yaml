@@ -1,0 +1,32 @@
+questions:
+  - variable: image.repository
+    label: "Image Repository"
+    description: "The repository for the Music Assistant image."
+    schema:
+      type: string
+      required: true
+  - variable: image.tag
+    label: "Image Tag"
+    description: "The tag for the Music Assistant image."
+    schema:
+      type: string
+      default: "latest"
+  - variable: image.pullPolicy
+    label: "Image Pull Policy"
+    description: "The pull policy for the image."
+    schema:
+      type: string
+      default: "IfNotPresent"
+      enum:
+        - value: "IfNotPresent"
+          description: "Only pull if not present"
+        - value: "Always"
+          description: "Always pull"
+        - value: "Never"
+          description: "Never pull"
+  - variable: interface
+    label: "External Interface"
+    description: "Select the external interface for Music Assistant."
+    schema:
+      type: string
+      required: true

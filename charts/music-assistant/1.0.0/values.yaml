@@ -1,0 +1,6 @@
+image:
+  repository: music-assistant/music-assistant
+  tag: latest
+  pullPolicy: IfNotPresent
+
+interface: ""
