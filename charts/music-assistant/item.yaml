@@ -1,8 +1,7 @@
 icon_url: https://music-assistant.io/assets/icon.png
-screenshots: [
-  "https://music-assistant.io/screenshots/screenshot1.png",
-  "https://music-assistant.io/screenshots/screenshot2.png"
-],
+screenshots:
+  - "https://music-assistant.io/screenshots/screenshot1.png"
+  - "https://music-assistant.io/screenshots/screenshot2.png"
 categories:
   - Media
 tags:
