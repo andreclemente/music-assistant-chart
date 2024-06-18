@@ -2,6 +2,7 @@
   "1.0.0": {
     "location": "/charts/music-assistant/1.0.0",
     "healthy": true,
+    "healthy_error": null,
     "last_update": "2023-06-13 00:00:00",
     "required_features": [],
     "human_version": "1.0.0",
