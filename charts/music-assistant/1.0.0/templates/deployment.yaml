@@ -1,23 +1,39 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: music-assistant
+  name: {{ include "music-assistant.fullname" . }}
+  labels:
+    app: {{ include "music-assistant.name" . }}
+    chart: {{ include "music-assistant.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: music-assistant
+      app: {{ include "music-assistant.name" . }}
+      release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: music-assistant
+        app: {{ include "music-assistant.name" . }}
+        release: {{ .Release.Name }}
     spec:
       containers:
-        - name: music-assistant
+        - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: "{{ .Values.image.pullPolicy }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+            - name: storage
+              mountPath: {{ .Values.storage.path }}
           ports:
-            - containerPort: 80
+            - name: http
+              containerPort: 80
           env:
-            - name: INTERFACE
-              value: "{{ .Values.interface }}"
+            - name: EXTERNAL_INTERFACE
+              value: {{ .Values.externalInterface.interface }}
+      volumes:
+        - name: storage
+          hostPath:
+            path: {{ .Values.storage.path }}
+            type: DirectoryOrCreate
