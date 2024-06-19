@@ -1,10 +1,32 @@
 image:
-  repository: "music-assistant/music-assistant"
-  tag: "latest"
-  pullPolicy: "IfNotPresent"
+  repository: music-assistant/music-assistant
+  pullPolicy: IfNotPresent
+  tag: latest
+service:
+  main:
+    ports:
+      main:
+        port: 8095
+        targetPort: 8095
 
-externalInterface:
-  interface: "eth0"
+# # Enable devices to be discoverable
+# hostNetwork: true
 
-storage:
-  path: "/mnt/data/music-assistant"
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+    targetSelectAll: true
+portal:
+  open:
+    enabled: true
+securityContext:
+  container:
+    readOnlyRootFilesystem: false
+    runAsNonRoot: false
+    runAsUser: 0
+    runAsGroup: 0
+    capabilities:
+      add:
+        - CAP_NET_RAW
+        - CAP_NET_BIND_SERVICE
